@@ -34,7 +34,7 @@ tasks {
     }
     
     register<Jar>("paperJar") {
-        archiveBaseName.set("VirtualChest")
+        archiveBaseName.set("MathCraft")
         from(sourceSets["main"].output)
         val plugins = File(rootDir, ".server/plugins/")
 
@@ -45,9 +45,9 @@ tasks {
                     File(plugins, archiveFileName.get()).delete()
                 }
                 into(plugins)
+                File(File(plugins, "update"), "UPDATE").createNewFile()
+                File(File(plugins, "update"), "RELOAD").delete()
             }
-            File(File(plugins, "update"), "UPDATE").createNewFile()
-            File(File(plugins, "update"), "RELOAD").delete()
         }
     }
 }

@@ -1,5 +1,5 @@
-name: sample
-main: io.github.pybsh.sample
+name: Mathcraft
+main: io.github.pybsh.mathcraft.MathcraftPlugin
 version: $version
 api-version: '1.19'
 
